@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FitMe Demo — Choose a site</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      background: radial-gradient(70% 60% at 80% -10%, #d7f2e6, transparent 60%), #14160f;
+      color: #f3f4ee; min-height: 100vh; display: grid; place-items: center; padding: 32px;
+    }
+    .hub { width: 100%; max-width: 1000px; text-align: center; }
+    h1 { font-family: "Fraunces", serif; font-weight: 500; font-size: clamp(34px, 6vw, 60px); line-height: 1.05; }
+    h1 em { font-style: italic; color: #34d399; }
+    .lead { color: #b7bbab; margin: 14px auto 44px; max-width: 60ch; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    @media (max-width: 760px) { .cards { grid-template-columns: 1fr; } }
+    .tile {
+      display: block; padding: 38px 26px; border-radius: 22px; text-decoration: none;
+      border: 1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.04);
+      transition: transform .18s, background .2s, border-color .2s; text-align: left;
+    }
+    .tile:hover { transform: translateY(-4px); background: rgba(255,255,255,.08); border-color: rgba(52,211,153,.5); }
+    .tile__name { font-family: "Fraunces", serif; font-size: 26px; margin-bottom: 6px; }
+    .tile__kind { font-size: 12px; text-transform: uppercase; letter-spacing: .14em; color: #8c9082; }
+    .tile__desc { color: #c5c9b9; font-size: 14px; margin-top: 14px; }
+    .tile__go { margin-top: 18px; font-weight: 600; color: #34d399; font-size: 14px; }
+    .foot { margin-top: 40px; color: #8c9082; font-size: 13px; }
+    .foot code { background: rgba(255,255,255,.08); padding: 2px 7px; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <main class="hub">
+    <h1>Three sites, <em>one body profile</em></h1>
+    <p class="lead">A working demo: register and log in on any site. Build your measurements in FitMe, connect it on the stores, then see your personalised fit on every product.</p>
+    <div class="cards">
+      <a class="tile" href="/fitme/profile.html">
+        <div class="tile__kind">Body profile</div>
+        <div class="tile__name">FitMe</div>
+        <div class="tile__desc">Scan two photos or enter measurements by hand. Start here.</div>
+        <div class="tile__go">Open FitMe →</div>
+      </a>
+      <a class="tile" href="/zara/index.html">
+        <div class="tile__kind">Storefront</div>
+        <div class="tile__name">ZARA</div>
+        <div class="tile__desc">Browse, connect FitMe in your account, see fit % on products.</div>
+        <div class="tile__go">Open Zara →</div>
+      </a>
+      <a class="tile" href="/massimo/index.html">
+        <div class="tile__kind">Storefront</div>
+        <div class="tile__name">Massimo Dutti</div>
+        <div class="tile__desc">Browse the collection and check your tailored fit per item.</div>
+        <div class="tile__go">Open Massimo Dutti →</div>
+      </a>
+    </div>
+    <p class="foot">Seeded demo login (all three sites): <code>demo@fitme.test</code> / <code>demo1234</code></p>
+  </main>
+</body>
+</html>

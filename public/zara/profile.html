@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Account — ZARA</title>
+  <link rel="stylesheet" href="zara.css">
+</head>
+<body data-app="zara">
+  <header class="hdr">
+    <nav class="hdr__nav"><a href="shop.html?gender=women">Woman</a><a href="shop.html?gender=men">Man</a><a href="shop.html">New In</a></nav>
+    <a class="logo" href="index.html">ZARA</a>
+    <nav class="hdr__util"><a href="shop.html">Search</a><a href="profile.html" data-account-link>Account</a><a href="#">Bag (0)</a></nav>
+  </header>
+
+  <main class="page-narrow" id="profile">
+    <h1>My Account</h1>
+    <div class="acct-row">
+      <div>
+        <div class="acct-row__label">Email</div>
+        <div id="acct-email"></div>
+      </div>
+      <button id="logout" class="btn btn--ghost">Log out</button>
+    </div>
+
+    <div class="card-block">
+      <h2>FitMe</h2>
+      <div id="link-panel"></div>
+    </div>
+  </main>
+
+  <script src="/shared/api.js"></script>
+  <script src="/shared/store.js"></script>
+</body>
+</html>

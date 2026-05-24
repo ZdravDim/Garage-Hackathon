@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Massimo Dutti</title>
+  <link rel="stylesheet" href="massimo.css">
+</head>
+<body data-app="massimo">
+  <header class="hdr">
+    <nav class="hdr__nav"><a href="shop.html?gender=women">Women</a><a href="shop.html?gender=men">Men</a><a href="shop.html">Collection</a></nav>
+    <a class="logo" href="index.html">Massimo Dutti</a>
+    <nav class="hdr__util"><a href="shop.html">Search</a><a href="login.html" data-account-link>Log in</a><a href="#">Bag</a></nav>
+  </header>
+
+  <main id="product">
+    <div class="pdp">
+      <div class="pdp__img" id="p-img"></div>
+      <div class="pdp__info">
+        <div class="pdp__cat" id="p-cat"></div>
+        <h1 id="p-name"></h1>
+        <div class="pdp__price" id="p-price"></div>
+
+        <div class="pdp__label">Select size</div>
+        <div class="sizes" id="p-sizes"></div>
+
+        <div id="fit-panel"></div>
+
+        <button class="btn">Add to bag</button>
+        <p class="pdp__material" id="p-material"></p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="ftr">
+    <span>Massimo Dutti — Demo storefront</span>
+    <span>Connect FitMe for tailored sizing</span>
+  </footer>
+
+  <script src="/shared/api.js"></script>
+  <script src="/shared/store.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "fitme-platform",
+  "version": "1.0.0",
+  "description": "Zara + Massimo Dutti mocks and FitMe, with working auth and mock fit APIs",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node seed.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^11.3.0",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "multer": "^2.1.1"
+  },
+  "devDependencies": {
+    "supertest": "^7.0.0"
+  }
+}

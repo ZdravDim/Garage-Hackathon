@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Account — Massimo Dutti</title>
+  <link rel="stylesheet" href="massimo.css">
+</head>
+<body data-app="massimo">
+  <header class="hdr">
+    <nav class="hdr__nav"><a href="shop.html?gender=women">Women</a><a href="shop.html?gender=men">Men</a><a href="shop.html">Collection</a></nav>
+    <a class="logo" href="index.html">Massimo Dutti</a>
+    <nav class="hdr__util"><a href="shop.html">Search</a><a href="profile.html" data-account-link>Account</a><a href="#">Bag</a></nav>
+  </header>
+
+  <main class="page-narrow" id="profile">
+    <h1>My Account</h1>
+    <div class="acct-row">
+      <div>
+        <div class="acct-row__label">Email</div>
+        <div id="acct-email"></div>
+      </div>
+      <button id="logout" class="btn btn--ghost">Log out</button>
+    </div>
+
+    <div class="card-block">
+      <h2>FitMe</h2>
+      <div id="link-panel"></div>
+    </div>
+  </main>
+
+  <script src="/shared/api.js"></script>
+  <script src="/shared/store.js"></script>
+</body>
+</html>

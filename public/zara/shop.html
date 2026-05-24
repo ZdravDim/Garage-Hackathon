@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop — ZARA</title>
+  <link rel="stylesheet" href="zara.css">
+</head>
+<body data-app="zara">
+  <header class="hdr">
+    <nav class="hdr__nav">
+      <a href="shop.html?gender=women">Woman</a>
+      <a href="shop.html?gender=men">Man</a>
+      <a href="shop.html?gender=women">New In</a>
+    </nav>
+    <a class="logo" href="index.html">ZARA</a>
+    <nav class="hdr__util">
+      <a href="shop.html">Search</a>
+      <a href="login.html" data-account-link>Log in</a>
+      <a href="#">Bag (0)</a>
+    </nav>
+  </header>
+
+  <section class="section">
+    <div class="section__head">
+      <h2 data-shop-heading>Women</h2>
+      <span data-product-count></span>
+    </div>
+    <div class="shop-tabs" id="gender-tabs"></div>
+    <div class="grid" id="product-grid"></div>
+  </section>
+
+  <footer class="ftr">
+    <span>ZARA — Demo storefront</span>
+    <span>Connect FitMe for personalised sizing</span>
+  </footer>
+
+  <script src="/shared/api.js"></script>
+  <script src="/shared/store.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+make me two website mocks (zara and massimo dutti) and make the login actually work (create user db and login/register/logout endpoints). Also a third website named 'FitMe' and make it   
+  have login as well and on it's profile user can upload height and two pictures which when uploaded, calculate the body measurements (just call api, it will return this data). Also user   
+  should be able to enter measurements manually / update them manually. Also for zara and massimo make user profile be able to connect account to the 'FitMe' account. and so when           
+  connected, when user visits a product, he gets information on that page what is the percentage of the fit with his own body measurements. For the percentage, api will be called. Be       
+  consistent with the current UI/UX of Zara and Massimo. Follow the best principles of UI/UX for 'FitMe'.     

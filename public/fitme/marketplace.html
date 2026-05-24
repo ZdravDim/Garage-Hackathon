@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FitMe — Marketplace</title>
+  <link rel="stylesheet" href="fitme.css">
+</head>
+<body>
+  <header class="hdr">
+    <div class="brand"><span class="dot"></span>FitMe</div>
+    <nav class="topnav">
+      <a href="profile.html">Profile</a>
+    </nav>
+    <div class="hdr__right">
+      <span id="hdr-email" style="color:var(--muted);font-size:13.5px"></span>
+      <button class="ghost-link" id="logout">Log out</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="intro">
+      <h1>The <em>fits-you</em> marketplace</h1>
+      <p>Clothes from every merchant, scored against your measurements. Drag the fit slider to hide what won't fit — each item links to the merchant to buy.</p>
+    </section>
+
+    <!-- Empty: no measurements -->
+    <section class="card" id="needs-measure" hidden>
+      <div class="empty-state">
+        <div style="font-size:30px">📏</div>
+        <p style="margin:8px 0 16px">Add your measurements first so we can score what fits you.</p>
+        <a class="btn" href="profile.html" style="display:inline-flex;width:auto;text-decoration:none">Go to your profile</a>
+      </div>
+    </section>
+
+    <div id="market" hidden>
+      <!-- Gender tabs -->
+      <div class="mtabs" id="gender-tabs">
+        <button class="mtab is-active" data-gender="" type="button">All</button>
+        <button class="mtab" data-gender="women" type="button">Women</button>
+        <button class="mtab" data-gender="men" type="button">Men</button>
+      </div>
+
+      <!-- Filter bar -->
+      <section class="filters card">
+        <div class="filter filter--fit">
+          <label for="f-fit">Fits me ≥ <strong id="fit-val">70</strong>%</label>
+          <input type="range" id="f-fit" min="0" max="100" step="5" value="70">
+        </div>
+        <div class="filter"><label for="f-merchant">Merchant</label><select id="f-merchant" class="select"></select></div>
+        <div class="filter"><label for="f-category">Category</label><select id="f-category" class="select"></select></div>
+        <div class="filter"><label for="f-size">Your size</label><select id="f-size" class="select"></select></div>
+        <div class="filter"><label for="f-price">Max price</label><select id="f-price" class="select"></select></div>
+        <div class="filter"><label for="f-sort">Sort</label>
+          <select id="f-sort" class="select">
+            <option value="fit">Best fit</option>
+            <option value="price_asc">Price: low to high</option>
+            <option value="price_desc">Price: high to low</option>
+          </select>
+        </div>
+        <button class="ghost-link" id="f-reset" type="button">Reset</button>
+      </section>
+
+      <p class="result-count" id="result-count"></p>
+      <div class="market-grid" id="market-grid"></div>
+      <div class="empty-state" id="no-results" hidden>
+        <div style="font-size:28px">🔍</div>
+        <p>Nothing matches these filters. Try lowering the fit threshold or clearing a filter.</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="/shared/api.js"></script>
+  <script src="fitme.js"></script>
+  <script>FitMe.initMarketplace();</script>
+</body>
+</html>

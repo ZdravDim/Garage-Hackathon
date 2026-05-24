@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FitMe — Sign in</title>
+  <link rel="stylesheet" href="fitme.css">
+</head>
+<body>
+  <main class="auth-shell">
+    <div class="auth-card">
+      <div class="brand"><span class="dot"></span>FitMe</div>
+      <h1 id="auth-title">Welcome back</h1>
+      <p class="sub" id="auth-sub">Sign in to your body profile</p>
+      <form id="auth-form">
+        <div class="field">
+          <label for="auth-email">Email</label>
+          <input class="input" type="email" id="auth-email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="auth-password">Password</label>
+          <input class="input" type="password" id="auth-password" minlength="6" autocomplete="current-password" required>
+        </div>
+        <p class="form-error" id="auth-error"></p>
+        <button class="btn" id="auth-submit" type="submit">Sign in</button>
+      </form>
+      <p class="auth-foot" id="auth-toggle-line">
+        New to FitMe? <a id="auth-toggle">Create an account</a>
+      </p>
+    </div>
+  </main>
+
+  <script src="/shared/api.js"></script>
+  <script src="fitme.js"></script>
+  <script>FitMe.initAuth();</script>
+</body>
+</html>
