@@ -8,6 +8,12 @@ Three frontends on one Node + SQLite backend:
 
 Authentication is real (per-site accounts, bcrypt-hashed passwords, server-side sessions). Photos→measurements calls the live **SnapMeasureAI** API (no key required); it returns dimensions as ratios of height, which FitMe scales to centimetres. The body→fit% call is a self-contained deterministic endpoint. Override the vision endpoint/timeout with `SNAPMEASURE_URL` / `SNAPMEASURE_TIMEOUT_MS`.
 
+## Demo
+
+<video src="./demo.mp4" controls width="100%"></video>
+
+▶️ [Watch the demo](./demo.mp4) — end-to-end walkthrough of the three frontends.
+
 ## Run
 
 ```bash
