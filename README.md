@@ -10,9 +10,9 @@ Authentication is real (per-site accounts, bcrypt-hashed passwords, server-side 
 
 ## Demo
 
-<video src="./demo.mp4" controls width="100%"></video>
 
-▶️ [Watch the demo](./demo.mp4) — end-to-end walkthrough of the three frontends.
+https://github.com/user-attachments/assets/65c629a0-9fc2-4c37-847f-3dde2958309f
+
 
 ## Run
 
